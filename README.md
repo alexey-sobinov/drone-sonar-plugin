@@ -1,7 +1,8 @@
 # drone-sonar-plugin
+### Original repo https://github.com/aosapps/drone-sonar-plugin 
+### jq and curl was added for integration with bitbucket
 The plugin of Drone CI to integrate with SonarQube (previously called Sonar), which is an open source code quality management platform.
-Original repo https://github.com/aosapps/drone-sonar-plugin
-jq and curl was added for integration with bitbucket
+
 
 Detail tutorials: [DOCS.md](DOCS.md).
 
@@ -20,7 +21,7 @@ docker run --rm \
   -e PLUGIN_SOURCES=. \
   -e SONAR_HOST=http://localhost:9000 \
   -e SONAR_TOKEN=60878847cea1a31d817f0deee3daa7868c431433 \
-  aosapps/drone-sonar-plugin
+  <docker repo>/drone-sonar-plugin
 ```
 
 ### Pipeline example
