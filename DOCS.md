@@ -4,8 +4,8 @@ title: SonarQube
 author: aosapps
 tags: [ Sonar, SonarQube, Analysis, report ]
 logo: sonarqube.svg
-repo: aosapps/drone-sonar-plugin
-image: aosapps/drone-sonar-plugin
+repo: <docker repo>/drone-sonar-plugin
+image: <docker repo>/drone-sonar-plugin
 ---
 
 This plugin can scan your code quality and post the analysis report to your SonarQube server. SonarQube (previously called Sonar), is an open source code quality management platform.
@@ -15,7 +15,7 @@ The below pipeline configuration demonstrates simple usage:
 ```yaml
 steps
 - name: code-analysis
-  image: aosapps/drone-sonar-plugin
+  image: <docker repo>/drone-sonar-plugin
   settings:
       sonar_host:
         from_secret: sonar_host
@@ -28,7 +28,7 @@ Customized parameters could be specified:
 ```diff
   steps
   - name: code-analysis
-    image: aosapps/drone-sonar-plugin
+    image: <docker repo>/drone-sonar-plugin
     settings:
         sonar_host:
           from_secret: sonar_host

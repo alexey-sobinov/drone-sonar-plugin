@@ -1,5 +1,7 @@
 # drone-sonar-plugin
 The plugin of Drone CI to integrate with SonarQube (previously called Sonar), which is an open source code quality management platform.
+Original repo https://github.com/aosapps/drone-sonar-plugin
+jq and curl was added for integration with bitbucket
 
 Detail tutorials: [DOCS.md](DOCS.md).
 
@@ -8,7 +10,7 @@ build go binary file:
 `GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -o drone-sonar`
 
 build docker image
-`docker build -t aosapps/drone-sonar-plugin .`
+`docker build -t <docker repo>/drone-sonar-plugin .`
 
 
 ### Testing the docker image:
@@ -25,7 +27,7 @@ docker run --rm \
 ```yaml
 steps
 - name: code-analysis
-  image: aosapps/drone-sonar-plugin
+  image: <docker repo>/drone-sonar-plugin
   settings:
       sonar_host:
         from_secret: sonar_host
