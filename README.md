@@ -7,11 +7,13 @@ The plugin of Drone CI to integrate with SonarQube (previously called Sonar), wh
 Detail tutorials: [DOCS.md](DOCS.md).
 
 ### Build process
-build go binary file: 
+Build go binary file: 
 `GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -o drone-sonar`
 
-build docker image
-`docker build -t <docker repo>/drone-sonar-plugin .`
+Build docker image
+`docker build -t <docker repo>/drone-sonar-plugin:<version> .`
+Push docker image
+`docker push <docker repo>/drone-sonar-plugin:<verison>`
 
 
 ### Testing the docker image:
